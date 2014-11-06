@@ -1,0 +1,10 @@
+function myObject(){
+
+    this.myProperty = 42;
+    var that = this; //private instance property to hold reference to public instance members
+
+    function myPrivateMethod(){
+        alert(that.myProperty);//alerts "42"
+        alert(this.myProperty);//erroneous
+    }
+}
